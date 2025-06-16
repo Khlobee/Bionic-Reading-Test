@@ -41,11 +41,28 @@ def convert_word(word):
     return finished_word
 
 
+def convert_sentence(sentence):
+    split_sentence = sentence.split()
+    finished_sentence = []
+    for word in split_sentence:
+        converted_word = convert_word(word)
+        finished_sentence.append(converted_word)
+
+    output_string = " ".join(finished_sentence)
+    return output_string
+    
+    #make an array of each word, separated by spaces, then run the convert word for each word in the array
+    #recombine the array into a string with spaces in between
+
 word1 = "Family"
 word2 = "Hospital"
 
 print(convert_word(word1))
 print(convert_word(word2))
 
+sentence1 = "This is a test to see if the bionic reading worked."
+print(convert_sentence(sentence1))
 
 
+
+#make code to make it do a whole sentence of this. 
